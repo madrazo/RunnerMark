@@ -1,6 +1,6 @@
 package ca.esdot.runnermark.sprites;
 import aze.display.TileSprite;
-import nme.Memory;
+//import flash.Memory;
 
 class EnemySprite extends GenericSprite
 {

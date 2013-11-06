@@ -1,9 +1,9 @@
 package utils;
 
-import nme.Lib;
-import nme.text.TextField;
-import nme.text.TextFormat;
-import nme.events.Event;
+import flash.Lib;
+import flash.text.TextField;
+import flash.text.TextFormat;
+import flash.events.Event;
 
 class FPS extends TextField
 {

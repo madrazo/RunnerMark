@@ -5,7 +5,7 @@ import aze.display.TileLayer;
 
 class GenericSprite extends TileClip
 {
-	static public var layer:TileLayer;
+	static public var _layer:TileLayer;
 	
 	public var groundY:Int;
 	var gravity:Float;
@@ -14,7 +14,7 @@ class GenericSprite extends TileClip
 
 	public function new(type:String) 
 	{
-		super(layer, type);
+		super(_layer, type);
 		//r = 1;
 		//g = 1; 
 		b = 0.1;

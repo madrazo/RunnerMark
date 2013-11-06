@@ -1,23 +1,23 @@
 package;
 
 import ca.esdot.runnermark.RunnerEngine;
-import nme.display.Shape;
-import nme.geom.Point;
+import flash.display.Shape;
+import flash.geom.Point;
 
 import aze.display.TileLayer;
 import aze.display.SparrowTilesheet;
-import nme.Assets;
-import nme.display.Bitmap;
-import nme.display.Sprite;
-import nme.display.StageAlign;
-import nme.display.StageScaleMode;
-import nme.events.Event;
-import nme.events.MouseEvent;
-import nme.Lib;
-import nme.net.URLLoader;
-import nme.net.URLRequest;
-import nme.text.TextField;
-import nme.text.TextFormat;
+import openfl.Assets;
+import flash.display.Bitmap;
+import flash.display.Sprite;
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
+import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.Lib;
+import flash.net.URLLoader;
+import flash.net.URLRequest;
+import flash.text.TextField;
+import flash.text.TextFormat;
 
 class RunnerMark extends Sprite
 {
@@ -90,7 +90,11 @@ class RunnerMark extends Sprite
 			//Assets.getBitmapData("assets/RunnerMark-low.png"), sheetData, 0.5);
 			Assets.getBitmapData("assets/RunnerMark.png"), sheetData);
 		
+		#if test30
+		RunnerEngine.targetFPS = 28;
+		#else
 		RunnerEngine.targetFPS = 58; // score = FPS*10 + ennemies.length
+		#end
 		
 		layer = new TileLayer(tilesheet);
 		

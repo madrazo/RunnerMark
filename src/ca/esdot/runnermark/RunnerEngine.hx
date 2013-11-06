@@ -7,12 +7,12 @@ import ca.esdot.runnermark.sprites.RunnerSprite;
 import aze.display.TileGroup;
 import aze.display.TileLayer;
 import aze.display.TileSprite;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.GradientType;
-import nme.display.Sprite;
-import nme.geom.Matrix;
-import nme.Lib;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.GradientType;
+import flash.display.Sprite;
+import flash.geom.Matrix;
+import flash.Lib;
 
 class RunnerEngine extends Sprite
 {	
@@ -28,8 +28,8 @@ class RunnerEngine extends Sprite
 	var runner:RunnerSprite;
 	
 	// pools
-	var spritePool:Hash<Array<GenericSprite>>;
-	var tilePool:Hash<Array<TileSprite>>;
+	var spritePool:Map<String, Array<GenericSprite>>;
+	var tilePool:Map<String, Array<TileSprite>>;
 	var groundList:Array<TileSprite>;
 	var particleList:Array<TileSprite>;
 	var enemyList:Array<GenericSprite>;
@@ -58,7 +58,7 @@ class RunnerEngine extends Sprite
 		
 		this.layer = layer;
 		_root = layer;
-		GenericSprite.layer = layer;
+		GenericSprite._layer = layer;
 
 		lastIncrement = Lib.getTimer() + 2000;
 		fps = -1;
@@ -67,8 +67,8 @@ class RunnerEngine extends Sprite
 		incrementDelay = 250;
 		maxIncrement = 12000;
 
-		spritePool = new Hash<Array<GenericSprite>>();
-		tilePool = new Hash<Array<TileSprite>>();
+		spritePool = new Map<String, Array<GenericSprite>>();
+		tilePool = new Map<String, Array<TileSprite>>();
 		groundList = new Array<TileSprite>();
 		particleList = new Array<TileSprite>();
 		enemyList = new Array<GenericSprite>();

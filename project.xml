@@ -7,24 +7,19 @@
 	
 	<window background="#333333" />
 	<window width="800" height="480" unless="mobile" />
-	<window orientation="landscape" vsync="true" if="mobile" />
+	<window orientation="landscape" if="mobile" />
 	
 	<window fps="60" />
-	<window fps="62" if="desktop" />
+	<window fps="30" if="test30" />
 	
 	<source path="src" />
-	<source path="C:\dev\haxe\libraries\nme-tilelayer\haxelib" />
 	
-	<haxelib name="nme" />
+	<haxelib name="openfl" />
 	<haxelib name="tilelayer" />
 	
 	<assets path="assets" include="*" exclude="nme.svg" />
 
 	<icon path="assets/nme.svg" />
-	
-	<ndll name="std" />
-	<ndll name="regexp" />
-	<ndll name="zlib" />
 
 	<!-- optimize JS output -->
 	<section if="haxe2">
@@ -32,6 +27,6 @@
 		<haxeflag name="--js-modern" if="html5" />
 	</section>	
 	<section if="haxe3">
-		<haxeflag name="-dce=std" if="haxe3" />
+		<haxeflag name="-dce std" if="haxe3" />
 	</section>
 </project>
