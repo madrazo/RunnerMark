@@ -1,17 +1,17 @@
-nme-RunnerMark
+RunnerMark
 ==============
 
 Performance demonstration
 -------------------------
 
-First goal was to do an NME port of [esDotDev's RunnerMark][1] for fair comparison of a realistic game scene. 
+First goal was to do an OpenFL port of [esDotDev's RunnerMark][1] for fair comparison of a realistic game scene. 
 
 Minor twists: 
 - shows 3 enemies even if it can't reach 58fps,
 - runner is rotating, enemies are randomly scaled & flipped,
 - for older Android devices you should not target 60fps; my HTC Desire (Nexus One) does a good job with lower targets.
 
-Here are the scores (FPSx10 + ennemies count, **in bold after engine update**):
+Here are the scores (FPSx10 + enemies count, **in bold after engine update**):
  - iPhone 3GS: **668**
  - iPod Touch 4: **978**
  - iPhone 4: 888
@@ -41,7 +41,7 @@ Other point of comparison:
 Introducing the TileLayer
 -------------------------
 
-Second goal was to create a simple wrapper on NME's Tilesheet which is rather low-level and native-targets orientated. 
+Second goal was to create a simple wrapper on OpenFL's Tilesheet which is rather low-level and native-targets orientated. 
 
  - provides a basic display-list, spritesheet animations, mirroring,
  - includes a Sparrow spritesheet parser, supporting trimming,
@@ -55,7 +55,7 @@ Second goal was to create a simple wrapper on NME's Tilesheet which is rather lo
 HTML5 version
 -------------
 
-Try NME's HTML5 output: http://philippe.elsass.me/lab/RunnerMark/
+Try OpenFL's HTML5 output: http://philippe.elsass.me/lab/RunnerMark/
 
 [1]:https://github.com/esDotDev/RunnerMark
 [2]:https://github.com/esDotDev/RunnerMark/tree/master/results
