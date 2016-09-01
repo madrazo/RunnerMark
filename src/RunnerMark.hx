@@ -56,7 +56,7 @@ class RunnerMark extends Sprite
 			Lib.current.scaleX = Lib.current.scaleY = 2;
 		}
 		#elseif flash
-		stage.quality = nme.display.StageQuality.LOW;
+		stage.quality = flash.display.StageQuality.LOW;
 		#end
 
 		#if js

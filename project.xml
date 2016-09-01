@@ -17,16 +17,6 @@
 	<haxelib name="openfl" />
 	<haxelib name="tilelayer" />
 	
-	<assets path="assets" include="*" exclude="nme.svg" />
-
-	<icon path="assets/nme.svg" />
-
-	<!-- optimize JS output -->
-	<section if="haxe2">
-		<haxeflag name="--dead-code-elimination" if="haxe2" />
-		<haxeflag name="--js-modern" if="html5" />
-	</section>	
-	<section if="haxe3">
-		<haxeflag name="-dce std" if="haxe3" />
-	</section>
+	<assets path="assets" />
+	
 </project>

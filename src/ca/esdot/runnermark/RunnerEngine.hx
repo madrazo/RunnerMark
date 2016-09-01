@@ -157,9 +157,9 @@ class RunnerEngine extends Sprite
 	
 	function createGroundPiece():TileSprite 
 	{
-		var sprite:TileSprite = getTile("ground");
+		var sprite:TileSprite = getTile("groundTop");
 		if (sprite == null)
-			sprite = new TileSprite(layer, "ground");
+			sprite = new TileSprite(layer, "groundTop");
 		
 		_root.addChildAt(sprite, _root.getChildIndex(bgStrip2) + 1);
 		return sprite; 
@@ -375,8 +375,7 @@ class RunnerEngine extends Sprite
 		var rect:Sprite = new Sprite();
 		rect.graphics.beginGradientFill(GradientType.LINEAR, [0x0, 0x1E095E], [1, .5], [0, 255], m);
 		rect.graphics.drawRect(0, 0, 128, 128);
-		var col = #if neko {rgb:0, a:0 } #else 0 #end;
-		var skyData:BitmapData = new BitmapData(128, 128, false, col);
+		var skyData:BitmapData = new BitmapData(128, 128, false, 0);
 		skyData.draw(rect);
 		return skyData;
 	}
