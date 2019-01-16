@@ -15,7 +15,7 @@
 	<source path="src" />
 	
 	<haxelib name="openfl" />
-	<haxelib name="tilelayer" />
+	<!--<haxelib name="tilelayer" />-->
 	
 	<assets path="assets" />
 	

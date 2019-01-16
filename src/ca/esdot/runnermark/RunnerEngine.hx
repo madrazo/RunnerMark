@@ -101,7 +101,7 @@ class RunnerEngine extends Sprite
 		addChild(layer.view);
 	}
 
-	public var runnerScore(get_runnerScore, set_runnerScore):Int;
+	public var runnerScore(get, set):Int;
 	
 	function get_runnerScore():Int
 	{
@@ -380,7 +380,7 @@ class RunnerEngine extends Sprite
 		return skyData;
 	}
 	
-	public var numEnemies(get_numEnemies, null):Int;
+	public var numEnemies(get, null):Int;
 	function get_numEnemies():Int {
 		return enemyList.length;
 	}
